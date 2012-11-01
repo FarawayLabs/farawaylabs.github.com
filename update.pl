@@ -22,6 +22,7 @@ while( ! $message) {
 print color("green"), "==============================\n";
 print color("reset");
 system("git commit -m \"$message\"");
+=cut
 system("git push heroku master");
 
 
@@ -29,8 +30,8 @@ print color("green"), "\n\n==============================\n";
 print color("green"), "Done updating. Pushing backup to github...\n";
 print color("green"), "==============================\n\n";
 print color("reset");
-
-system("git push github master");
+=cut
+system("git push origin master");
 
 print color("green"), "\n\n==============================\n";
 print color("blue"), "completed!\n";
